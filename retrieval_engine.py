@@ -57,6 +57,19 @@ class FAQEngine:
         
         best_score = float(top_results.values[0])
         best_idx = int(top_results.indices[0])
+        best_question = self.questions[best_idx]
+        
+        # --- DEBUGGING SNIPPET ---
+        print("\n" + "="*50)
+        print(f"[DEBUG] Input User   : '{query}'")
+        print(f"[DEBUG] Top-1 Match  : '{best_question}'")
+        print(f"[DEBUG] Similarity   : {best_score:.4f} (Threshold: {self.threshold})")
+        if best_score < self.threshold:
+            print("[DEBUG] STATUS       : ❌ FALLBACK (Skor di bawah threshold)")
+        else:
+            print("[DEBUG] STATUS       : ✅ LOLOS (Skor di atas threshold)")
+        print("="*50 + "\n")
+        # -------------------------
         
         # --- Deteksi Out-of-Domain (OOD) menggunakan Threshold Fallback ---
         # Jika skor kemiripan berada di bawah batas minimum (0.45), tolak untuk menjawab.

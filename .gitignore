@@ -1,0 +1,10 @@
+# Mengabaikan folder model hasil fine-tuning
+faq_sbert_finetuned/
+
+# Mengabaikan file model berukuran besar lainnya
+*.pkl
+*.npy
+
+# Mengabaikan cache Python
+__pycache__/
+*.pyc

@@ -15,7 +15,8 @@ def load_faq_engine():
     # Inisialisasi class dari retrieval_engine.py
     # Ganti string model dengan 'faq_sbert_finetuned' jika Anda ingin memakai model lokal Anda
     engine = FAQEngine(
-        model_name_or_path='sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', 
+        # model_name_or_path='sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', 
+        model_name_or_path='faq_sbert_finetuned',
         threshold=0.45
     )
     
