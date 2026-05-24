@@ -1,11 +1,54 @@
 query,expected_question
-bagaimana cara memasak nasi goreng,__OOD__
-siapa presiden indonesia saat ini,__OOD__
-berapa harga laptop asus terbaru,__OOD__
-cara daftar netflix,__OOD__
-apa rumus luas lingkaran,__OOD__
-rekomendasi film korea terbaik,__OOD__
-jadwal kereta api jakarta bandung,__OOD__
-cara membuat es kopi susu,__OOD__
-apa itu blockchain dan cryptocurrency,__OOD__
-tips diet sehat untuk pemula,__OOD__
+Siapa dosen pengampu mata kuliah Sistem Tertanam di semester ini?,__OOD__
+Berapa jumlah SKS mata kuliah wajib di Kurikulum 2024 Teknik Komputer?,__OOD__
+Apa saja mata kuliah pilihan di Teknik Elektro FTUI?,__OOD__
+Apa saja mata kuliah prasyarat untuk mengambil mata kuliah Antena?,__OOD__
+Apakah ada kelas khusus untuk mahasiswa berprestasi di DTE?,__OOD__
+Apakah ada kelas malam untuk mahasiswa yang bekerja di DTE?,__OOD__
+Berapa biaya ujian susulan per SKS di FTUI?,__OOD__
+Apa saja fasilitas laboratorium di DTE FTUI?,__OOD__
+Dimana letak ruang baca departemen Teknik Elektro?,__OOD__
+Apakah gedung DTE memasukkan lift untuk difabel?,__OOD__
+Dimana lokasi parkir mahasiswa di dekat DTE?,__OOD__
+Siapa ketua BEM FTUI periode 2025/2026?,__OOD__
+Apa saja kegiatan OKK (Orientasi Kehidupan Kampus) di FTUI?,__OOD__
+Apa saja kegiatan UKM di FTUI selain robotik?,__OOD__
+Bagaimana cara bergabung dengan tim robotik DTE?,__OOD__
+Apa saja prestasi tim robotik DTE di kompetisi internasional?,__OOD__
+Bagaimana cara mengajukan beasiswa Bank Indonesia di UI?,__OOD__
+Bagaimana prosedur pengajuan surat rekomendasi beasiswa LPDP dari Dekan?,__OOD__
+Bagaimana cara mengurus KTM yang hilang di UI?,__OOD__
+Bagaimana cara mengajukan keringanan UKT di FTUI?,__OOD__
+Apakah bisa bayar BOP secara dicicil di FTUI?,__OOD__
+Apa persyaratan TOEFL untuk wisuda di UI?,__OOD__
+Bagaimana cara mengurus surat keterangan aktif kuliah untuk keperluan wajib militer?,__OOD__
+Bagaimana cara mengajukan perubahan IRS setelah batas akhir?,__OOD__
+Bagaimana cara mengajukan perubahan nilai dari D ke C?,__OOD__
+Berapa passing grade Teknik Elektro UI tahun ini?,__OOD__
+Apakah ada jalur prestasi non-akademik masuk FTUI?,__OOD__
+Bagaimana cara daftar ulang setelah lulus SNBP di UI?,__OOD__
+Bagaimana cara mendaftar asrama mahasiswa UI?,__OOD__
+Berapa biaya kos di sekitar kampus UI Depok per bulan?,__OOD__
+Apa saja tempat makan murah di sekitar FTUI?,__OOD__
+Apa saja topik riset utama di laboratorium telekomunikasi DTE?,__OOD__
+Bagaimana cara mendaftar program student exchange di UI?,__OOD__
+Apakah ada program double degree untuk S1 Teknik Elektro?,__OOD__
+Bagaimana cara mengakses jurnal IEEE gratis dari kampus UI?,__OOD__
+Apakah ada bimbingan karir untuk alumni DTE FTUI?,__OOD__
+Apa saja prosedur pendaftaran KP di Teknik Sipil FTUI?,__OOD__
+Bagaimana cara mendaftar sidang skripsi di Fakultas Hukum UI?,__OOD__
+Berapa biaya UKT untuk jurusan Teknik Mesin FTUI?,__OOD__
+Apa syarat masuk program magister Teknik Industri FTUI?,__OOD__
+Kapan jadwal UTS semester ganjil 2025/2026 dimulai?,__OOD__
+Kapan libur semester ganjil dimulai di UI?,__OOD__
+Jadwal pendaftaran KKN periode ini di UI?,__OOD__
+Bagaimana cara mengajukan surat izin penelitian ke luar negeri dari UI?,__OOD__
+Apakah mahasiswa DTE bisa mengajukan dana riset dari DRPM UI?,__OOD__
+Bagaimana prosedur pengajuan etik penelitian untuk riset biomedik?,__OOD__
+Siapa dosen wali untuk angkatan 2023 Teknik Komputer?,__OOD__
+Apa jadwal konsultasi Prof. Dadang Gunawan minggu ini?,__OOD__
+Bagaimana kontak email Dr. Prima D. Purnamasari?,__OOD__
+Apakah DTE menyediakan rekaman kuliah untuk mahasiswa yang sakit?,__OOD__
+Bagaimana cara mengajukan ujian offline jika sedang sakit?,__OOD__
+Jam buka perpustakaan pusat UI di hari Sabtu?,__OOD__
+Apakah perpustakaan FTUI menyediakan buku teks edisi terbaru?,__OOD__
