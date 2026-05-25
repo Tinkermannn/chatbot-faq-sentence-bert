@@ -1,5 +1,11 @@
 # Chatbot FAQ Akademik DTE Berbasis Sentence-BERT
 
+## Identitas Tim
+Kelompok Rabu-18
+- Raka Arrayan Muttaqien (2306161800)
+- Daffa Hardhan (2306161763)
+- Wilman Saragih Sitio (2306161776)
+
 ## Ringkasan Proyek
 Proyek ini merupakan implementasi sistem *question answering* berbasis *retrieval* untuk domain FAQ akademik Departemen Teknik Elektro (DTE). Sistem memanfaatkan model **Sentence-BERT** untuk merepresentasikan pertanyaan dalam ruang vektor, kemudian memilih jawaban paling relevan menggunakan **Cosine Similarity**.
 
@@ -17,23 +23,23 @@ Aplikasi disajikan dalam antarmuka web interaktif menggunakan **Streamlit**, seh
 
 ## Arsitektur Sistem
 1. **Pra-pemrosesan teks**
-- Normalisasi huruf kecil, penghapusan tanda baca, dan perapian spasi.
-- Ekspansi singkatan akademik (contoh: `kp -> kerja praktik`, `ta -> tugas akhir`).
+   - Normalisasi huruf kecil, penghapusan tanda baca, dan perapian spasi.
+   - Ekspansi singkatan akademik (contoh: `kp -> kerja praktik`, `ta -> tugas akhir`).
 
 2. **Representasi semantik**
-- Pertanyaan pengguna di-*encode* menggunakan model Sentence-BERT hasil *fine-tuning*.
-- Embedding FAQ korpus disimpan terlebih dahulu (*precomputed embeddings*).
+   - Pertanyaan pengguna di-*encode* menggunakan model Sentence-BERT hasil *fine-tuning*.
+   - Embedding FAQ korpus disimpan terlebih dahulu (*precomputed embeddings*).
 
 3. **Pencarian jawaban**
-- Hitung Cosine Similarity antara embedding query dan seluruh embedding FAQ.
-- Ambil kandidat teratas (*top-k*), lalu pilih *top-1* sebagai jawaban utama.
+   - Hitung Cosine Similarity antara embedding query dan seluruh embedding FAQ.
+   - Ambil kandidat teratas (*top-k*), lalu pilih *top-1* sebagai jawaban utama.
 
 4. **Validasi domain**
-- Jika skor kemiripan < *threshold* (default `0.45`), sistem memberikan respons fallback.
+   - Jika skor kemiripan < *threshold* (default `0.45`), sistem memberikan respons fallback.
 
 ## Struktur Proyek
 ```text
-finpro-ai/
+chatbot-faq-sentence-bert/
 |-- app.py
 |-- retrieval_engine.py
 |-- extract_data.py
@@ -74,31 +80,35 @@ Daftar pustaka utama (sesuai `requirements.txt`):
 ## Instalasi dan Menjalankan Aplikasi
 1. (Opsional) Buat virtual environment.
 2. Instal dependensi:
-```bash
-pip install -r requirements.txt
-```
-3. Jalankan aplikasi:
-```bash
-streamlit run app.py
-```
-4. Buka URL lokal yang ditampilkan Streamlit di browser.
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Ekstrak data biner ke format aman (wajib dijalankan sekali sebelum menjalankan server):
+   ```bash
+   python extract_data.py
+   ```
+4. Jalankan server UI:
+   ```bash
+   streamlit run app.py
+   ```
+5. Buka URL lokal yang ditampilkan Streamlit di browser.
 
 ## Alur Penggunaan
 1. Pengguna mengetik pertanyaan pada kolom chat.
 2. Sistem menormalisasi pertanyaan dan menghitung embedding query.
 3. Sistem mencari FAQ terdekat berdasarkan Cosine Similarity.
 4. Sistem menampilkan:
-- jawaban utama,
-- kandidat pertanyaan terkait (*top-3*),
-- waktu inferensi.
+   - jawaban utama,
+   - kandidat pertanyaan terkait (*top-3*),
+   - waktu inferensi.
 
 ## Catatan Evaluasi Model
 Berdasarkan *model card* pada folder model:
 - Basis model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
 - Dimensi embedding: `384`
 - Metrik semantic similarity (dev):
-- Pearson cosine: `0.9386`
-- Spearman cosine: `0.8392`
+  - Pearson cosine: `0.9386`
+  - Spearman cosine: `0.8392`
 
 ## Keterbatasan
 - Sistem tidak menghasilkan jawaban baru; kualitas jawaban bergantung pada kelengkapan FAQ.
@@ -110,13 +120,3 @@ Berdasarkan *model card* pada folder model:
 2. Kalibrasi threshold adaptif berbasis validasi terpisah.
 3. Menyimpan log anonim interaksi untuk analisis kesalahan dan perbaikan model.
 4. Menambahkan pipeline evaluasi otomatis (akurasi top-1, top-k, dan OOD detection).
-
-## Identitas Tim
-Kelompok Rabu-18
-- Raka Arrayan Muttaqien (2306161800)
-- Daffa Hardhan (2306161763)
-- Wilman Saragih Sitio (2306161776)
-
-## Referensi Singkat
-- Reimers, N., & Gurevych, I. (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks*.
-- Dokumentasi Sentence-Transformers: https://www.sbert.net/
